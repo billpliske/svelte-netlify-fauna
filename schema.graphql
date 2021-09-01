@@ -1,0 +1,26 @@
+type Artwork {
+  category: String! # Movie Mutts, Pop Culture
+  title: String!
+  shortTitle: String! @unique # No spaces, to filter with
+  description: String!
+  type: String! # painting, drawing, print
+  width: Int
+  height: Int
+  canvasDepth: Float
+  price: Float
+  hearts: Int
+  isSold: Boolean
+  imgThumb: String
+  imgMain: String
+  img1: String
+  img2: String
+  img3: String
+  edgeColor: String
+  urlO: String
+  urlP: String
+  date: String # to order list
+}
+
+type Query {
+  artworks: [Artwork!]
+}
